@@ -1,5 +1,5 @@
-var googleKey = "AIzaSyB1ymE2e4uK8DahtyZA9GBXiutWtHtPYmM";
-var sgGovKey = "k9lW1rPW57NCFiASZ6ny64ZFJFAPNLC6 ";
+var googleKey = "googlekey";
+var sgGovKey = "sggovkey ";
 var parkStops = [
 	{stopTitle: "Sengkang Sports Centre", location: {lat:1.396499, lng:103.886805}},
 	{stopTitle: "Sengkang Riverside Park", location: {lat:1.398268, lng:103.884155}},
@@ -87,8 +87,8 @@ var ViewModel = function() {
 			data: { ll: apiLat+','+apiLng,
 			categoryId: '4d4b7105d754a06374d81259',
 			radius: 500,
-			client_id: 'E4DQO23CGLRA1AKM2G3VRK4KUBUQUDNMLXREN4VTDQOT53LF',
-			client_secret: 'L4KHKNHDX5PYYA3MUYONIHHGT5CJ5IICHPHDWRGU1G2SEOFA',
+			client_id: 'foursquare clientid',
+			client_secret: 'foursquare client secret',
 			limit: 10,
 			v: 20170126
 			},
