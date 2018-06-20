@@ -25,3 +25,9 @@ API used in this project.
 1. Google Maps for Map, Markers, Street view and static maps.
 2. Singapore Government API for Weather, Temperature, Humidity, and PSI.
 3. Foursquare for Nearby Food Stops.
+
+## Pre-requisites ##
+API Keys needed.
+1. Google maps.
+2. foursquare
+3. SG.gov
