@@ -1,0 +1,193 @@
+body {
+	font-family: sans-serif;
+	background-color: #00A388;
+	color: white;
+}
+
+h2 {
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#parklogo {
+	max-width:100%;
+	max-height:100%;
+	border-radius: 50px;
+}
+
+#top-container {
+	height:15%;
+	padding-bottom: 20px;
+	border-bottom: solid #D9DFCD;
+}
+
+#logo-container {
+	float: left;
+	height:80%;
+	width:10%;
+}
+
+#logo-title-container {
+	height:80%;
+	width:80%;
+}
+		
+#menu-click-container {
+	margin-top:10px;
+	height:25%;
+}
+
+#map-menu-container {
+	margin-top:15px;
+	width:100%;
+}
+
+
+#menu-container {
+	float: left;
+	width:0;
+	/* This trasform moves the list off canvas. */
+  transform: translate(-300px, 0);
+  transition: transform 1s ease;
+  transition: width 0.5s ease;
+}
+
+#menu-container.open {
+	float: left;
+	width: 25%;
+	position: relative;
+	transform: translate(0px, 0);
+	transition: transform 1s ease;
+	transition: width 0.5s ease;
+}
+
+#map {
+	height:100%;
+}
+
+#close {
+	font-size: 20px;
+	float: right;
+	padding-right: 10px;
+}
+
+
+.list-item:hover {
+	background-color: #ED624D;
+}
+
+.menu-clickable {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.menu-clickable:hover {
+	background-color: #1EAAC2;
+}
+
+.weather-class {
+	font-size: 12px;
+}
+
+.copyright_text {
+	text-align: center;
+}
+
+.infowindow-h5, .infowindow-store, .weather-class {
+	font-size: 10px;
+	color: black;
+}
+
+.div-border {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-bottom: solid #D9DFCD;
+}
+
+.storelist-name:hover {
+	background-color: #ED624D;
+}
+
+
+
+/*media queries*/
+/*phones*/
+@media screen and (max-width:640px) {
+
+	ul {
+		list-style-type:circle;
+		margin: 5px;
+		padding: 5px;
+	}
+
+	input {
+		padding-right: 10px;
+		font-size: 10px;
+		width: 90px;
+		height: 20px;
+	}
+
+	#top-container {
+		height:10%;
+		padding-bottom: 20px;
+		border-bottom: solid #D9DFCD;
+	}
+	
+	#logo-container {
+		float: left;
+		height:80%;
+		width:20%;
+	}
+
+	#app-title {
+		font-size: 18px;
+	}
+	
+	.menu-clickable {
+		font-size: 15px;
+	}
+
+	h3, #close, .prepend-class {
+		font-size: 12px;
+	}
+
+	.list-item {
+		font-size: 10px;
+	}
+
+	.weather-class, .storelist-name {
+		font-size: 10px;
+		color: black;
+	}
+
+	#menu-container {
+		float: left;
+		width:0;
+		
+	  /* This trasform moves the list off canvas. */
+	  transform: translate(-300px, 0);
+	  transition: transform 1s ease;
+	  transition: width 0.5s ease;
+	}
+
+	#menu-container.open {
+		float: left;
+		width: 30%;
+		position: relative;
+		transform: translate(0px, 0);
+		transition: transform 1s ease;
+		transition: width 0.5s ease;
+	}
+	
+	.copyright_text {
+		font-size: 12px;
+	}
+}

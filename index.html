@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Popular Parks in Singapore-Sengkang/Punggol Area</title>
+    	<link href='css/style.css' rel='stylesheet'>
+	</head>
+
+	<body>
+		<div id="top-container">
+			<div id="logo-container">
+				<img id="parklogo" src="img/NParks_Logo.jpg"></img>
+			</div>
+			<div id="logo-title-container">
+				<h2 id="app-title">Park Locator - Singapore - NorthEast</h2>
+			</div>
+			<div id="menu-click-container">
+				<a id="menu" class="menu-clickable" data-bind="click: openMenu">&#9776;</a><span class="menu-clickable"> Menu<span>
+			</div>		
+		</div>
+		<div id="map-menu-container">
+			<div id="menu-container" data-bind="css: {'open' : toggleClassToOpen}">
+				<a id="close" class="menu-clickable" data-bind="click: openMenu">X</a>
+				<h3>List of Parks</h3>
+				<input type=text placeholder="filter list here" data-bind="value: filterQuery, valueUpdate: 'input', event: {input: updateList, click: updateList}"></input>
+				<ul id="park-loc-list" data-bind="foreach: parkLocationsArray">
+		        	<li class="list-item" data-bind="text: stopTitle, click: $parent.showNearbyShops"></li>
+		    	</ul>
+		    	<div class="div-border"></div>
+		    	<div data-bind="with: currentLoc()">
+		    		<h3 data-bind="text: locationName"></h3>
+		    	</div>
+		    	<div id="list-details-container">
+		    		<div data-bind="html: justADiv"></div>
+		    		
+		    		<div data-bind="html: justANearbyTitle"></div>
+					<ul id="food-loc-list" data-bind="foreach: nearbyFoodArray">
+			        	<li class="list-item" data-bind="text: shopName, click: $parent.displayShopDetails"></li>
+			    	</ul>
+		   		</div>
+	    	</div>
+			<div id="map">
+			</div>
+		</div>
+		<div id="bottom-container">
+			<p class="copyright_text">Leonid &copy; 2017</p>
+		</div>
+		<script src="js/lib/knockout-3.2.0.js"></script>
+		<script src="js/lib/jquery-1.11.0.js"></script>
+		<script src="js/app.js"></script>
+		<script async defer onerror="mapError()"
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyB1ymE2e4uK8DahtyZA9GBXiutWtHtPYmM&v=3&callback=InitMap">
+    	</script>
+	</body>
+</html>
