@@ -1,5 +1,3 @@
-# Neighborhood-Map
-
 # Popular Parks in Singapore-Sengkang/Punggol Area #
 This is an app that shows popular parks around the NorthEast part of Singapore.
 
